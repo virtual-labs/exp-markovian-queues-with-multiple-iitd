@@ -1,3 +1,49 @@
+let start_btn = document.getElementById('start_btn');
+let stop_btn = document.getElementById('stop_btn');
+let clear_btn = document.getElementById('clear_btn');
+let ar_input = document.getElementById('ar'); 
+let sr_input = document.getElementById('sr'); 
+let running = false;
+
+ar_input.addEventListener('keyup', function() {
+    if(ar_input.value <= 0) {
+        ar_input.value = '';
+    }
+});
+
+sr_input.addEventListener('keyup', function() {
+    if(sr_input.value <= 0) {
+        sr_input.value = '';
+    }
+});
+
+document.getElementById('start_btn').addEventListener('click', function() {
+    if(ar_input.value.length>0 && sr_input.value.length > 0) {
+        running = true;
+        start_btn.disabled = running;
+        stop_btn.disabled = !running;
+        clear_btn.disabled = running;
+    }
+    // start_btn.style["background-color"] = "green";
+    // start_btn.setAttribute("style", "background-color: #02a4d3");
+    // stop_btn.setAttribute("style", "background-color: #fc5753");
+    // clear_btn.setAttribute("style", "background-color: #fdbb40");
+});
+
+document.getElementById('stop_btn').addEventListener('click', function() {
+    running = false;
+    start_btn.disabled = running;
+    stop_btn.disabled = !running;
+    clear_btn.disabled = running;
+});
+
+document.getElementById('clear_btn').addEventListener('click', function() {
+    running = false;
+    start_btn.disabled = running;
+    stop_btn.disabled = !running;
+    clear_btn.disabled = running;
+});
+
 let data;
 let options;
 let chart;
@@ -51,6 +97,10 @@ window.onload = function () {
 
     google.charts.setOnLoadCallback(drawChart);
 
+    start_btn.disabled = running;
+    stop_btn.disabled = !running;
+    clear_btn.disabled = running;
+
     function drawChart() {
         data = google.visualization.arrayToDataTable([
             ["Time", "Customers"],
@@ -61,6 +111,8 @@ window.onload = function () {
             title: "No. of Customers in System vs Time",
             width: "100%",
             height: "100%",
+            colors: ['#015D57'],
+            backgroundColor: { fill:'transparent' },
             hAxis: {
                 title: "Time",
             },
@@ -232,7 +284,8 @@ function drawTable() {
     let pa1 =
         (Math.pow(ns, ns) / factorial(ns)) *
         (Math.pow(ar / (ns * sr), ns) / (1 - ar / (ns * sr)));
-    console.log(Math.pow(ns, ns) / factorial(ns));
+    console.log("ns=", ns);
+    console.log(Math.pow(parseInt(ns), parseInt(ns)), Math.pow(ns, ns) / factorial(ns));
     console.log(Math.pow(ar / (ns * sr), ns) / (1 - ar / (ns * sr)));
     console.log(pa1);
 
