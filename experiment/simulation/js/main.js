@@ -62,6 +62,8 @@ let av_time_s;
 let cust_total;
 let av_st;
 let busy_servers;
+let num_wait;
+
 
 class Queue {
     constructor() {
@@ -238,6 +240,7 @@ function startSimulation(arrival_rate, service_rate, num_servers, speed) {
 
             if (busy_servers == ns) {
                 q.enqueue(time);
+                num_wait+=1;
             } else {
                 let idx = -1;
                 for (let i = 0; i < ns; i++) {
@@ -318,6 +321,14 @@ function drawTable() {
     let ex_ts = av_time_s / cust_total;
     let th_st = 1 / sr;
 
+    // Time in queue
+    let ex_qt = av_cust_q / num_wait;
+    if(num_wait==0) {
+        ex_qt = 0.0;
+    }
+    let th_qt = Tq;
+
+
     if (ar >= ns * sr) {
         document.getElementById("th_cs").innerHTML =
             "Steady state solution does not exist";
@@ -337,12 +348,20 @@ function drawTable() {
             ex_ts >= 0 && ex_ts != NaN
                 ? ex_ts.toFixed(2)
                 : "Unable to calculate results";
-        document.getElementById("th_st").innerHTML =
+        // document.getElementById("th_st").innerHTML =
+        //     "Steady state solution does not exist";
+        // document.getElementById("ex_st").innerHTML =
+        //     ex_st >= 0 && ex_st != NaN
+        //         ? ex_st.toFixed(2)
+        //         : "Unable to calculate results";
+
+        document.getElementById("th_qt").innerHTML =
             "Steady state solution does not exist";
-        document.getElementById("ex_st").innerHTML =
-            ex_st >= 0 && ex_st != NaN
-                ? ex_st.toFixed(2)
+        document.getElementById("ex_qt").innerHTML =
+            ex_qt >= 0 && ex_qt != NaN
+                ? ex_qt.toFixed(2)
                 : "Unable to calculate results";
+
         document.getElementById("ex").innerHTML =
         "Time-dependent Results (Simulation time: " +
             (time.toFixed(2) >= 0
@@ -374,14 +393,25 @@ function drawTable() {
             ex_ts >= 0 && ex_ts != NaN
                 ? ex_ts.toFixed(2)
                 : "Unable to calculate results";
-        document.getElementById("th_st").innerHTML =
-            th_st >= 0 && th_st != NaN
-                ? th_st.toFixed(2)
+        // document.getElementById("th_st").innerHTML =
+        //     th_st >= 0 && th_st != NaN
+        //         ? th_st.toFixed(2)
+        //         : "Unable to calculate results";
+        // document.getElementById("ex_st").innerHTML =
+        //     ex_st >= 0 && ex_st != NaN
+        //         ? ex_st.toFixed(2)
+        //         : "Unable to calculate results";
+
+        document.getElementById("th_qt").innerHTML =
+            th_qt >= 0 && th_qt != NaN
+                ? th_qt.toFixed(2)
                 : "Unable to calculate results";
-        document.getElementById("ex_st").innerHTML =
-            ex_st >= 0 && ex_st != NaN
-                ? ex_st.toFixed(2)
+        document.getElementById("ex_qt").innerHTML =
+            ex_qt >= 0 && ex_qt != NaN
+                ? ex_qt.toFixed(2)
                 : "Unable to calculate results";
+
+
         document.getElementById("ex").innerHTML =
         "Time-dependent Results (Simulation time: " +
             (time.toFixed(2) >= 0
@@ -413,6 +443,7 @@ function clearChart() {
     cust_total = 0;
     av_st = 0;
     busy_servers = 0;
+    num_wait = 0;
     end_times = [];
     start_times = [];
     for (let i = 0; i < ns; i++) {
