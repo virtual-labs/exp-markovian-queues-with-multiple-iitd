@@ -7,11 +7,11 @@
 #### $$p_n=p_0\left(\frac{\lambda^n}{n!\mu^n}\right), \quad \text{for}~ 0\geq n < c. $$  $$p_n=p_0\left(\frac{\lambda^n}{c^{n-c}\mu^n}\right), \quad \text{for}~ n\geq c. $$
 #### Additionally, $$\sum_{n=0}^{\infty}{p_n}= 1, $$
 #### yields $$p_0=\left(\sum_{n=0}^{c-1}\frac{r^n}{n!}+\sum_{n=c}^{\infty}\frac{r^n}{c^{n-c}c!}\right)^{-1},$$ where $r=\frac{\lambda}{\mu} ~\text{and} ~ \rho= \frac{r}{c}= \frac{\lambda}{c\mu}$ is the traffic intensity for a multi server queue. 
-#### This gives $$p_0=1-\rho, \quad for~ \rho<1,$$
-#### and $$p_n=(1-\rho)\rho^n, \quad for~ \rho<1.$$
-#### which is the full steady-state solution for the M/M/1 system. The existence of a steady-state solution depends on the condition that $\rho<1$ or $\lambda<\mu$. This is intuitive, for if $\lambda>\mu$, the mean arrival rate is greater than the mean service rate, so the system size increases without bound over time. Note that the system is perfectly balanced when $\lambda=\mu$, but is unsatble, since it has no spare service capacity to handle random variation in arrivals and services.
+#### This gives $$p_0=\left(\sum_{n=0}^{c-1}\frac{r^n}{n!}+\frac{r^c}{c!(1-\rho)}\right)^{-1}, \quad \text{for}~ \frac{r}{c}=\rho<1.$$
+
+#### The existence of a steady-state solution depends on the condition that $\rho < 1$ or $\lambda < c\mu$. This is intuitive, for if $\lambda > c\mu$, the mean arrival rate is greater than the mean maximum potential service rate, so the system size increases without bound over time.
 ### Performance Measures:
-* #### Average number of customers in the system $(L)$ is given by $$L= \sum_{j=0}^{\infty}{jp_j}=\frac{\rho}{1-\rho}.$$
+* #### Average number of customers in the system $(L)$ is given by $$L= \sum_{j=0}^{\infty}{jp_j}=r+\left(\frac{r^c\rho}{c!(1-\rho)^2}\right).$$
 * #### Average number of customers waiting in the queue for service $(L_q)$ can be obtained as $$L_q=L-\frac{\lambda}{\mu}.$$
 * #### Average time a customer spends in the system $(W)$ is obtained using Little's law, $L=\lambda W$, and is given as $$W=\frac{1}{\mu-\lambda}.$$
 * #### Average time a customer spends in the queue $(W_q)$ is obtained using Little's law, $L_q=\lambda W_q$, and is given as $$W_q=\frac{\rho}{\mu-\lambda}.$$
