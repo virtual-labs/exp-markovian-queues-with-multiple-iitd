@@ -2,19 +2,11 @@
 #### M/M/c queue is one of the specific type of continuous time Markov chain. It consists of a set of states {0, 1, 2,... \} denoting the 'population' of a system. Let $n$ denotes the number of customers in the system. State transitions occur as soon as a customer arrives or departs from the system. Arrivals are Poisson with rate $\lambda$, there are $c$ servers, and each server has an independently and identically distributed exponential service-time distribution with mean $\frac{1}{\mu}$. The rate of service completions (or "deaths ") depends on the number of customers in the system. If there are $c$ or more customers in the system, then all $c$ servers must be busy. Since each server processes customers with rate $\mu$, the combined service-completion rate for the system is $c\mu$. When there are fewer than $c$ customers in the system, $n < c$, only $n$ of the $c$ servers are busy and the combined service-completion rate for the system is $n\mu$. Thus
 #### $$\mu_n= n\mu, \quad 1\leq n < c,$$
 #### $$\mu_n= c\mu, \quad n\geq c.$$
-#### $$\begin{aligned}
-    &\mu_n \coloneqq \begin{cases}
-     \begin{array}{ll} n\mu,&1\leq n < c,\\
-     c\mu, & n\geq c\\
-      \end{array}\end{cases} ,\\
-      \end{aligned}$$\\
+#### <!-- $$\begin{aligned} &\mu_n \coloneqq \begin{cases}\begin{array}{ll} n\mu,&1\leq n < c,\\ c\mu, & n\geq c\\ \end{array}\end{cases} ,\\\end{aligned}$$\\Remove all lines above this line before making changes to the file --> <!-- Remove all lines above this line before making changes to the file -->
 ####  Thus the steady-state probabilities $p_n$ of the system are
-#### $$(\lambda+\mu)p_n=\mu p_{n+1}+\lambda p_{n-1}, \quad \text{for}~ n\geq 1,$$
-#### $$\lambda p_0= \mu p_1. $$
-#### Thus we can write $p_n$ as
-#### $$p_n=p_0\left(\frac{\lambda}{\mu}\right)^n, \quad for~ n\geq 1. $$
+#### $$p_n=p_0\left(\frac{\lambda^n}{n!\mu^n}\right), \quad \text{for}~ 0\geq n < c. $$  $$p_n=p_0\left(\frac{\lambda^n}{c^{n-c}\mu^n}\right), \quad \text{for}~ n\geq c. $$
 #### Additionally, $$\sum_{n=0}^{\infty}{p_n}= 1, $$
-#### yields $$p_0=\frac{1}{\sum_{n=0}^{\infty}{\rho^n}},$$ where $\rho= \frac{\lambda}{\mu}$ is the traffic intensity for a single server. 
+#### yields $$p_0=\left(\sum_{n=0}^{c-1}\frac{r^n}{n!}+\sum_{n=c}^{\infty}\frac{r^n}{c^{n-c}c!}\right)^{-1},$$ where $r=\frac{\lambda}{\mu} ~\text{and} ~ \rho= \frac{r}{c}= \frac{\lambda}{c\mu}$ is the traffic intensity for a multi server queue. 
 #### This gives $$p_0=1-\rho, \quad for~ \rho<1,$$
 #### and $$p_n=(1-\rho)\rho^n, \quad for~ \rho<1.$$
 #### which is the full steady-state solution for the M/M/1 system. The existence of a steady-state solution depends on the condition that $\rho<1$ or $\lambda<\mu$. This is intuitive, for if $\lambda>\mu$, the mean arrival rate is greater than the mean service rate, so the system size increases without bound over time. Note that the system is perfectly balanced when $\lambda=\mu$, but is unsatble, since it has no spare service capacity to handle random variation in arrivals and services.
