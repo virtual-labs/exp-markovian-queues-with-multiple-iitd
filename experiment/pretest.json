@@ -19,12 +19,29 @@
       "difficulty": "beginner"
     },
     {
+      "question": "What does number of servers in the system represents?",
+      "answers": {
+        "a": "Number of customers arriving for the service",
+        "b": "Total number of service providers in the system",
+        "c": "Number of service provider providing service at any instant in the system ",
+        "d": "Number of service providers which are idle at any instant in the system"
+      },
+      "explanations": {
+        "a": "Mean arrival rate is defined as number of arrivals per unit time",
+        "b": "Mean service rate is defined as number of customers served per unit time",
+        "c": "Simulation speed is the extent of speed with which simulation of experiment is performed",
+        "d": "Start is used to simulate the experiment for the given values of parameters"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
       "question": "What is the relationship between mean arrival rate and mean service rate for the existence of a steady-state solution?",
       "answers": {
         "a": "Mean arrival rate = Mean service rate",
-        "b": "Mean arrival rate > Mean service rate",
-        "c": "Mean arrival rate < Mean service rate",
-        "d": "Mean service rate is independent of mean arrival rate for the existence of steady state solution"
+        "b": "Mean arrival rate = Number of servers times the mean service rate",
+        "c": "Mean arrival rate < Number of servers times the mean service rate",
+        "d": "Mean arrival rate < Mean service rate"
       },
       "explanations": {
         "a": "For mean arrival rate equals to mean service rate, traffic intensity equals to 1, which leads infinite number of customers in the system",
@@ -50,7 +67,7 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "In a barber shop run by one barber, the queueing model will be best suited is?",
+      "question": "In a Confectionery shop run by four servants, the queueing model will be best suited is?",
       "answers": {
         "a": "Single server model",
         "b": "Multi server model",
@@ -58,9 +75,9 @@
         "d": "Multi server with markovian arrival model"
       },
       "explanations": {
-        "c": "Since the customers are served by one man and the service of future state depend on the present state irrespective of the past state"
+        "c": "Since the customers are served by four person and the service of future state depend on the present state irrespective of the past state"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "d",
       "difficulty": "intermediate"
     }
   ]
