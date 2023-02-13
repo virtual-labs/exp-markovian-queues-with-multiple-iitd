@@ -10,7 +10,7 @@
         "d": "0.42825"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
         "c": "Explanation 2",
         "d": "Explanation 2"
@@ -27,7 +27,7 @@
         "d": "6.02825"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
         "c": "Explanation 2",
         "d": "Explanation 2"
