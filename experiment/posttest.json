@@ -45,7 +45,7 @@
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
-    }
+    },
     {
       "question": "Consider the New Delhi International Airport. Assume that it has three runway which is used for arrivals only. Airplanes have been found to arrive at a rate of 20 per hour. The time taken for an airplane to land is assumed to follow exponential distribution with service rate is 20 per hour. Without loss of generality, assume that the systemis modeled as a M/M/c queueing system. Find the expected waiting time to land??",
       "answers": {
@@ -56,6 +56,6 @@
       },
       "correctAnswer": "a",
       "difficulty": "intermediate"
-    }
+    },
   ]
 }
