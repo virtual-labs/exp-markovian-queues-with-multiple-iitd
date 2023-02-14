@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Consider Walmart supermarket with 7 counters. Assume that 9 customers arrive on an average every 5 minutes while each cashier in the counter can serve on an average three customers in 5 minutes. Assume that arrivals follow a Poisson process and service times follow exponential distribution. Find average time a customer spends in the system??",
+      "question": "Consider Walmart supermarket with 7 counters. Assume that 9 customers arrive on an average every 5 minutes while each cashier in the counter can serve on an average three customers in 5 minutes. Assume that arrivals follow a Poisson process and service times follow exponential distribution. Find average time a customer spends in the system?",
       "answers": {
         "a": "0.015694",
         "b": "0.02825",
@@ -19,7 +19,7 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "Consider Walmart supermarket with 7 counters. Assume that 9 customers arrive on an average every 5 minutes while each cashier in the counter can serve on an average three customers in 5 minutes. Assume that arrivals follow a Poisson process and service times follow exponential distribution. Find average number of customers in the system??",
+      "question": "Consider Walmart supermarket with 7 counters. Assume that 9 customers arrive on an average every 5 minutes while each cashier in the counter can serve on an average three customers in 5 minutes. Assume that arrivals follow a Poisson process and service times follow exponential distribution. Find average number of customers in the system?",
       "answers": {
         "a": "3.02825",
         "b": "4.62825",
@@ -36,7 +36,7 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "Consider the New Delhi International Airport. Assume that it has three runway which is used for arrivals only. Airplanes have been found to arrive at a rate of 20 per hour. The time taken for an airplane to land is assumed to follow exponential distribution with service rate is 20 per hour. Without loss of generality, assume that the systemis modeled as a M/M/c queueing system. What is the expected number of airplanes waiting to land??",
+      "question": "Consider the New Delhi International Airport. Assume that it has three runway which is used for arrivals only. Airplanes have been found to arrive at a rate of 20 per hour. The time taken for an airplane to land is assumed to follow exponential distribution with service rate is 20 per hour. Without loss of generality, assume that the systemis modeled as a M/M/c queueing system. What is the expected number of airplanes waiting to land?",
       "answers": {
         "a": "0.04535",
         "b": "0.06535",
@@ -47,7 +47,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Consider the New Delhi International Airport. Assume that it has three runway which is used for arrivals only. Airplanes have been found to arrive at a rate of 20 per hour. The time taken for an airplane to land is assumed to follow exponential distribution with service rate is 20 per hour. Without loss of generality, assume that the systemis modeled as a M/M/c queueing system. Find the expected waiting time to land??",
+      "question": "Consider the New Delhi International Airport. Assume that it has three runway which is used for arrivals only. Airplanes have been found to arrive at a rate of 20 per hour. The time taken for an airplane to land is assumed to follow exponential distribution with service rate is 20 per hour. Without loss of generality, assume that the systemis modeled as a M/M/c queueing system. Find the expected waiting time to land?",
       "answers": {
         "a": "0.0022725",
         "b": "0.006535",
