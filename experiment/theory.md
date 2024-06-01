@@ -1,7 +1,6 @@
-<img src="images/MMC-1.png"/>
-<img src="images/MMC-2.png"/>
-<img src="images/MMC-3.png"/>
-<img src="images/MMC-4.png"/>
-<img src="images/MMC-5.png"/>
-<img src="images/MMC-6.png"/>
+<img src="images/mmc-1.png"/>
+<img src="images/mmc-2.png"/>
+<img src="images/mmc-3.png"/>
+<img src="images/mmc-4.png"/>
+<img src="images/mmc-5.png"/>
 
